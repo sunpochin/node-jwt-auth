@@ -10,6 +10,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cors());
 
+app.get('/', function(req, res) {
+  res.send('hello world');
+});
 // use JWT auth to secure the api
 app.use(jwt());
 
